@@ -1,0 +1,112 @@
+@import url(https://fonts.google.com/specimen/Manrope);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkblue: hsl(217, 19%, 35%);
+  --sdarkblue: hsl(214, 17%, 51%);
+  --grayblue: hsl(212, 23%, 69%);
+  --lgrayblue: hsl(210, 46%, 95%);
+}
+
+body {
+  font-family: Manrope;
+  font-size: 1.1rem;
+  background-color: var(--lgrayblue);
+}
+main {
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 1rem;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.image img {
+  width: 90vw;
+  max-width: 400px;
+  border: none;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.text {
+  padding: 10px;
+  margin: 10px;
+}
+.text h2 {
+  font-weight: 700;
+}
+.text p {
+  font-weight: 500;
+  margin: 10px 0px;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.avatar {
+  width: 70px;
+  border-radius: 50%;
+}
+.share-click {
+  background-color: var(--sdarkblue);
+  display: flex;
+  flex-direction: row;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+}
+.icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-around;
+}
+.icon {
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--lgrayblue);
+}
+.icon-clicked {
+  background-color: var(--lgrayblue);
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+}
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (min-width: 500px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    margin-top: 1.5rem;
+  }
+  .flex-2 {
+    background-color: white;
+    padding: 1rem;
+    padding-bottom: 0%;
+  }
+  .image img {
+    width: 50vw;
+  }
+}
