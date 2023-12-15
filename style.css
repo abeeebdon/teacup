@@ -21,25 +21,39 @@ main {
   width: 90%;
   max-width: 900px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: 2rem;
   background-color: white;
+  height: fit-content;
   border: none;
   border-radius: 10px;
+  gap: 0px;
 }
 
+.flex-1 {
+  flex-basis: 50%;
+  flex-grow: 2;
+}
+.flex-2 {
+  position: relative;
+  flex-basis: 50%;
+  flex-shrink: 2;
+}
+/* Styling the first flex item */
 .image img {
-  width: 90vw;
-  max-width: 400px;
+  width: 100%;
   border: none;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  height: 100%;
 }
-
+/* Styling the second flex item */
 .text {
   padding: 10px;
   margin: 10px;
+  margin-left: 0px;
 }
 .text h2 {
   font-weight: 700;
@@ -48,6 +62,7 @@ main {
   font-weight: 500;
   margin: 10px 0px;
 }
+/* styling the footer part */
 .footer {
   display: flex;
   flex-direction: row;
@@ -60,15 +75,24 @@ main {
   width: 70px;
   border-radius: 50%;
 }
+
+/* This should always be display none */
 .share-click {
   background-color: var(--sdarkblue);
   display: flex;
   flex-direction: row;
   display: none;
+  gap: 1rem;
   justify-content: space-around;
   align-items: center;
-  padding: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  position: absolute;
+  top: 55%;
+  right: -2%;
+  border: none;
+  border-radius: 0.7rem;
 }
+
 .icon-wrapper {
   display: flex;
   flex-direction: row;
@@ -83,7 +107,7 @@ main {
 }
 .icon-clicked {
   background-color: var(--lgrayblue);
-  padding: 10px;
+  padding: 5px;
   border: none;
   border-radius: 50%;
 }
@@ -93,20 +117,61 @@ main {
   cursor: pointer;
   outline: none;
 }
-
-@media (min-width: 500px) {
+@media only screen (max-width: 800px) {
   main {
+    width: 100vw;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    display: block;
+    background: none;
+    width: 100vw;
+    margin: 0 auto;
+    height: fit-content;
+    border: none;
+    border-radius: 10px;
+  }
+  .flex-1 {
+    width: 100%;
+  }
+  .image img {
+    width: 100%;
+  }
+  .share-click {
+    background-color: var(--sdarkblue);
     display: flex;
     flex-direction: row;
-    background: none;
-    margin-top: 1.5rem;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
   }
+}
+@media (max-width: 500px) {
   .flex-2 {
     background-color: white;
     padding: 1rem;
     padding-bottom: 0%;
   }
-  .image img {
-    width: 50vw;
+  .share-click {
+    background-color: var(--sdarkblue);
+    display: none;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: static;
+    border-radius: 0%;
+    border: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: 1rem;
+  }
+  .text h2 {
+    font-size: 1.2rem;
   }
 }

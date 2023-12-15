@@ -17,7 +17,7 @@
   </head>
   <body>
     <main>
-      <div class="image">
+      <div class="image flex-1">
         <img src="./images/drawers.jpg" alt="" />
       </div>
       <div class="flex-2">
@@ -33,18 +33,21 @@
           </p>
         </div>
         <div class="footer" id="footer">
-          <div>
-            <img
-              src="./images/avatar-michelle.jpg"
-              alt="Michelle"
-              class="avatar"
-            />
-          </div>
+          <img
+            src="./images/avatar-michelle.jpg"
+            alt="Michelle"
+            class="avatar"
+          />
           <div class="name-year">
             <h3>Michelle Appleton</h3>
             <p>28 Jun 2020</p>
           </div>
-          <div class="icon">
+          <div class="icon" id="icon">
+            <button class="btn" id="share">
+              <img src="./images/icon-share.svg" alt="share" />
+            </button>
+          </div>
+          <div class="icon" id="icon1" style="display: none">
             <button class="btn" id="share">
               <img src="./images/icon-share.svg" alt="share" />
             </button>
@@ -57,10 +60,13 @@
             <img src="./images/icon-twitter.svg" alt="" />
             <img src="./images/icon-pinterest.svg" alt="" />
           </div>
-          <div class="icon-clicked">
-            <button class="btn" id="shared">
-              <img src="./images/icon-share.svg" alt="" />
-            </button>
+        </div>
+        <div class="share-click" id="clicked2">
+          <h3>SHARE</h3>
+          <div class="icon-wrapper">
+            <img src="./images/icon-facebook.svg" alt="" />
+            <img src="./images/icon-twitter.svg" alt="" />
+            <img src="./images/icon-pinterest.svg" alt="" />
           </div>
         </div>
       </div>
