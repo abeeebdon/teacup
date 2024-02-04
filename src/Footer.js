@@ -1,17 +1,32 @@
+import { FaTwitter, FaFacebook, FaPinterest } from 'react-icons/fa'
 import img2 from './images/avatar-michelle.jpg'
-import { FaShare } from 'react-icons/fa'
+import { IoIosShareAlt } from 'react-icons/io'
 
-const Footer = () => {
+const Footer = ({ handleShare, toggle }) => {
   return (
     <div className="footer">
-      <img src={img2} alt="Michelle" className="avatar" />
-      <div className="name-year">
-        <h3>Michelle Appleton</h3>
-        <p>28 Jun 2020</p>
-      </div>
+      {toggle ? (
+        <div className="footer-container">
+          <img src={img2} alt="Michelle" className="avatar" />
+          <div className="name-year">
+            <h3>Michelle Appleton</h3>
+            <p>28 Jun 2020</p>
+          </div>
+        </div>
+      ) : (
+        <div className="share-mobile">
+          <p>Share</p>
+          <div>
+            <FaFacebook />
+            <FaTwitter />
+            <FaPinterest />
+          </div>
+        </div>
+      )}
+
       <div className="icon">
         <button className="btn">
-          <FaShare className="btn-icon" />
+          <IoIosShareAlt className="btn-icon" onClick={() => handleShare()} />
         </button>
       </div>
     </div>

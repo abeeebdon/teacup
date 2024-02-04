@@ -1,6 +1,6 @@
 import img1 from './images/drawers.jpg'
 import img2 from './images/avatar-michelle.jpg'
-import { FaShare } from 'react-icons/fa'
+import { IoIosShareAlt } from 'react-icons/io'
 import useWindowSize from './hooks/useWindowSize'
 import Footer from './Footer'
 import Share from './Share'
@@ -24,7 +24,7 @@ const TeaCup = ({ handleShare, toggle }) => {
           </p>
         </div>
         <div className="relative">
-          {toggle && <Share />}
+          {toggle && width > 600 && <Share />}
           {width > 600 ? (
             <div className="footer">
               <img src={img2} alt="Michelle" className="avatar" />
@@ -34,12 +34,15 @@ const TeaCup = ({ handleShare, toggle }) => {
               </div>
               <div className="icon">
                 <button className="btn">
-                  <FaShare className="btn-icon" onClick={() => handleShare()} />
+                  <IoIosShareAlt
+                    className="btn-icon"
+                    onClick={() => handleShare()}
+                  />
                 </button>
               </div>
             </div>
           ) : (
-            <Footer />
+            <Footer handleShare={handleShare} />
           )}
         </div>
       </div>
