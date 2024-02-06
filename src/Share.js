@@ -2,7 +2,7 @@ import { FaFacebook, FaPinterest, FaTwitter } from 'react-icons/fa'
 
 const Share = () => {
   return (
-    <div class="icon-wrapper">
+    <div className="icon-wrapper">
       <p>Share</p>
       <FaFacebook className="share-icon" />
       <FaTwitter className="share-icon" />

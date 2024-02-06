@@ -2,12 +2,15 @@ import { useState } from 'react'
 import TeaCup from './TeaCup'
 const App = () => {
   const [toggle, setToggle] = useState(false)
-  const handleShare = () => {
-    setToggle(!toggle)
-  }
+  const [mobileToggle, setMobileToggle] = useState(false)
   return (
     <div className="App">
-      <TeaCup handleShare={handleShare} toggle={toggle} />
+      <TeaCup
+        setToggle={setToggle}
+        toggle={toggle}
+        mobileToggle={mobileToggle}
+        setMobileToggle={setMobileToggle}
+      />
     </div>
   )
 }
